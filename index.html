@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Portfolio of Your Name: skills, experience, certifications, and projects." />
+    <script>
+      // Persisted theme to avoid flash
+      (() => {
+        try {
+          const theme = localStorage.getItem('theme');
+          if (theme) document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="brand" aria-label="Go to home">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-text">Your Name</span>
+        </a>
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+        <nav id="siteNav" class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="section hero" aria-label="Hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Your Name</h1>
+            <p class="tagline">Role or Headline • City, Country</p>
+            <p class="intro">Brief intro about who you are, what you do, and what you're passionate about. Keep it concise and clear.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#projects">View Projects</a>
+              <a class="btn" href="#contact">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-label="About">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            Replace this with a short professional summary. Mention your years of experience,
+            focus areas, and what kinds of opportunities you're looking for.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="section" aria-label="Skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3>Languages</h3>
+              <div class="badges">
+                <span class="badge">JavaScript</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">Python</span>
+                <span class="badge">Go</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h3>Frameworks</h3>
+              <div class="badges">
+                <span class="badge">React</span>
+                <span class="badge">Next.js</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Django</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h3>Cloud & DevOps</h3>
+              <div class="badges">
+                <span class="badge">AWS</span>
+                <span class="badge">Docker</span>
+                <span class="badge">Kubernetes</span>
+                <span class="badge">GitHub Actions</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <h3>Databases</h3>
+              <div class="badges">
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">Redis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-label="Experience">
+        <div class="container">
+          <h2>Experience</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <h3>Senior Software Engineer · Company Name</h3>
+                <p class="muted">Jan 2023 — Present · City, Country</p>
+                <ul>
+                  <li>Designed and built feature X impacting Y users.</li>
+                  <li>Improved performance by Z% using [technique].</li>
+                  <li>Led a team of N engineers across A projects.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <h3>Software Engineer · Another Company</h3>
+                <p class="muted">May 2020 — Dec 2022 · City, Country</p>
+                <ul>
+                  <li>Delivered project A with stack B.</li>
+                  <li>Automated CI/CD with GitHub Actions.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="certifications" class="section" aria-label="Certifications">
+        <div class="container">
+          <h2>Certifications</h2>
+          <div class="cards-grid">
+            <article class="card">
+              <h3>AWS Certified Solutions Architect – Associate</h3>
+              <p class="muted">Amazon Web Services · 2024</p>
+              <div class="card-actions">
+                <a class="btn small" href="#" target="_blank" rel="noopener">View</a>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Google Professional Cloud Architect</h3>
+              <p class="muted">Google Cloud · 2023</p>
+              <div class="card-actions">
+                <a class="btn small" href="#" target="_blank" rel="noopener">View</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-label="Projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Project One</h3>
+              <p>Short description of the project, the problem it solves, and your role.</p>
+              <div class="badges">
+                <span class="badge">React</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">Node.js</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+                <a class="btn small" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Project Two</h3>
+              <p>Brief description with measurable outcomes if possible.</p>
+              <div class="badges">
+                <span class="badge">Python</span>
+                <span class="badge">FastAPI</span>
+                <span class="badge">PostgreSQL</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+                <a class="btn small" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-label="Contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Interested in working together or have a question? Reach out:</p>
+          <p>
+            <a class="btn primary" href="mailto:you@example.com">you@example.com</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
