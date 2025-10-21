@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>Alex Doe — Portfolio</title>
+    <meta name="description" content="Creative, professional, and interactive portfolio of Alex Doe — Software Engineer and designer of delightful user experiences." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alex Doe — Portfolio" />
+    <meta property="og:description" content="Creative, professional, and interactive portfolio of Alex Doe — Software Engineer and designer of delightful user experiences." />
+    <meta property="og:image" content="./assets/og/og-image.png" />
+    <meta property="og:url" content="." />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alex Doe — Portfolio" />
+    <meta name="twitter:description" content="Creative, professional, and interactive portfolio of Alex Doe — Software Engineer and designer of delightful user experiences." />
+    <meta name="twitter:image" content="./assets/og/og-image.png" />
+
+    <meta name="theme-color" content="#0ea5e9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)" />
+
+    <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <link rel="preload" href="./assets/css/styles.css" as="style" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <script>
+      // Apply saved theme early to avoid flash
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          if (stored === 'light' || stored === 'dark') {
+            document.documentElement.setAttribute('data-theme', stored);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Doe",
+        "jobTitle": "Software Engineer",
+        "url": ".",
+        "image": "./assets/icons/avatar.svg",
+        "sameAs": [
+          "https://github.com/your-username",
+          "https://www.linkedin.com/in/your-username/",
+          "https://twitter.com/your-username"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Go to top">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span class="brand-text">Alex Doe</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme (T)">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.45 14.32l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM12 4V1h-1v3h1zm0 19v-3h-1v3h1zM4 13H1v-1h3v1zm19 0h-3v-1h3v1zM5.64 17.66l-1.41 1.41 1.79 1.8 1.41-1.41-1.79-1.8zM17.66 5.64l1.41-1.41-1.8-1.79-1.41 1.41 1.8 1.79zM12 6a6 6 0 100 12 6 6 0 000-12z"/></svg>
+          </button>
+          <button id="command-btn" class="icon-btn" aria-haspopup="dialog" aria-controls="command-palette" aria-label="Open command palette" title="Command palette (⌘K / Ctrl K)">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 5h18v4H3V5zm0 6h18v8H3v-8zm2 2v4h14v-4H5z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="home" class="section hero" aria-label="Hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="container hero-inner">
+          <h1 class="headline reveal">Crafting thoughtful software, with taste.</h1>
+          <p class="subhead reveal">I'm Alex, a software engineer who ships elegant, inclusive experiences. I blend engineering rigor with creative polish.</p>
+          <div class="cta-row reveal">
+            <a class="btn primary" href="#projects">Explore projects</a>
+            <a class="btn" href="./assets/resume/Alex-Doe-Resume.pdf" download>Download résumé</a>
+          </div>
+          <ul class="social reveal" aria-label="Social links">
+            <li><a href="https://github.com/your-username" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/your-username/" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+            <li><a href="mailto:hello@example.com">Email</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-label="About">
+        <div class="container grid two">
+          <div class="about-media reveal">
+            <div class="avatar"></div>
+          </div>
+          <div class="about-content reveal">
+            <h2>About</h2>
+            <p>I help teams ship high-quality products that feel fast, friendly, and robust. I specialize in front-end architecture, design systems, and performance.</p>
+            <ul class="badges">
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>CSS</li>
+              <li>Accessibility</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-label="Projects">
+        <div class="container">
+          <div class="section-head">
+            <h2>Featured Projects</h2>
+            <div class="filters" role="group" aria-label="Filter projects by tag">
+              <button class="chip active" data-filter="all">All</button>
+              <button class="chip" data-filter="web">Web</button>
+              <button class="chip" data-filter="design">Design</button>
+              <button class="chip" data-filter="data">Data</button>
+              <button class="chip" data-filter="oss">OSS</button>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <article class="card tilt reveal" data-tags="web,oss">
+              <div class="card-media gradient-1"></div>
+              <div class="card-body">
+                <h3>Pulse UI</h3>
+                <p>Open-source component library with accessible primitives and delightful micro-interactions.</p>
+                <div class="tags"><span>Web</span><span>OSS</span><span>TypeScript</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn sm">Live</a>
+                  <a href="#" class="btn sm">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card tilt reveal" data-tags="web,data">
+              <div class="card-media gradient-2"></div>
+              <div class="card-body">
+                <h3>Insightboard</h3>
+                <p>Realtime analytics dashboard with streaming charts and queryable reports.</p>
+                <div class="tags"><span>Web</span><span>Data</span><span>WebSocket</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn sm">Live</a>
+                  <a href="#" class="btn sm">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card tilt reveal" data-tags="design,web">
+              <div class="card-media gradient-3"></div>
+              <div class="card-body">
+                <h3>Muse</h3>
+                <p>Generative art studio exploring geometry, color, and motion.</p>
+                <div class="tags"><span>Design</span><span>Web</span><span>Canvas</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn sm">Live</a>
+                  <a href="#" class="btn sm">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card tilt reveal" data-tags="oss">
+              <div class="card-media gradient-4"></div>
+              <div class="card-body">
+                <h3>Little Tools</h3>
+                <p>A collection of small utilities that save minutes daily.</p>
+                <div class="tags"><span>OSS</span><span>CLI</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn sm">Live</a>
+                  <a href="#" class="btn sm">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-label="Experience">
+        <div class="container">
+          <h2>Experience</h2>
+          <ol class="timeline">
+            <li class="reveal">
+              <div class="time">2023 — Present</div>
+              <div class="entry">
+                <h3>Senior Software Engineer · Acme</h3>
+                <p>Lead front-end on growth platform; shipped design system and performance wins.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="time">2020 — 2023</div>
+              <div class="entry">
+                <h3>Software Engineer · Pixel Co</h3>
+                <p>Built interactive data viz experiences and internal tooling.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="time">2018 — 2020</div>
+              <div class="entry">
+                <h3>Engineer · Studio</h3>
+                <p>Prototyped creative interfaces with a focus on craft.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-label="Contact">
+        <div class="container grid two">
+          <div class="contact-copy reveal">
+            <h2>Let's build something great</h2>
+            <p>I'm open to freelance and full-time opportunities. Send a note and I'll get back soon.</p>
+            <a class="btn" href="mailto:hello@example.com">Email me</a>
+          </div>
+          <form class="contact-form reveal" aria-label="Contact form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="command-palette" aria-label="Command palette">
+      <form method="dialog" class="palette">
+        <input id="command-input" type="text" placeholder="Type a command or search…" aria-label="Command" autocomplete="off" />
+        <ul id="command-list" role="listbox" aria-label="Command results"></ul>
+        <div class="palette-hint">Try: “theme dark”, “go projects”, “filter web”. Press Esc to close.</div>
+      </form>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Alex Doe. Crafted with care.</p>
+      </div>
+    </footer>
+
+    <script defer src="./assets/js/main.js"></script>
+  </body>
+</html>
