@@ -1,0 +1,105 @@
+/* CSS reset and variables */
+:root {
+  --bg: #0b0c10;
+  --bg-elev: #111318;
+  --text: #e6e6e6;
+  --muted: #9aa0a6;
+  --primary: #5b8cff;
+  --primary-contrast: #0a0a0a;
+  --border: #22242b;
+  --badge: #1b1f2a;
+}
+
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-elev: #f6f7f9;
+  --text: #121212;
+  --muted: #4b5563;
+  --primary: #2458ff;
+  --primary-contrast: #ffffff;
+  --border: #e5e7eb;
+  --badge: #eef2ff;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.section { padding: 72px 0; }
+.section h2 { font-size: 2rem; margin: 0 0 20px; }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: saturate(1.2) blur(8px);
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0;
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; }
+.brand-mark { color: var(--primary); }
+
+.site-nav { display: flex; align-items: center; gap: 18px; }
+.site-nav a { padding: 8px 10px; border-radius: 8px; }
+.site-nav a.active { background: var(--badge); }
+.nav-toggle { display: none; font-size: 22px; background: none; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+.theme-toggle { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+
+@media (max-width: 800px) {
+  .nav-toggle { display: inline-block; }
+  .site-nav { position: absolute; right: 4%; left: 4%; top: 60px; flex-direction: column; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: none; }
+  .site-nav.open { display: flex; }
+}
+
+/* Hero */
+.hero { padding: 96px 0 56px; }
+.hero-inner { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.hero h1 { font-size: clamp(2.2rem, 3vw + 1rem, 3.2rem); margin: 0 0 6px; }
+.tagline { color: var(--muted); margin: 0 0 12px; }
+.intro { max-width: 60ch; }
+.cta-row { display: flex; gap: 12px; margin-top: 16px; }
+
+/* Buttons */
+.btn { display: inline-block; border: 1px solid var(--border); padding: 10px 14px; border-radius: 10px; transition: transform .06s ease, background .2s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--primary); color: var(--primary-contrast); border-color: color-mix(in oklab, var(--primary) 80%, var(--border)); }
+.btn.small { padding: 6px 10px; font-size: 0.92rem; }
+
+/* Skills */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.skill-card { border: 1px solid var(--border); background: var(--bg-elev); border-radius: 14px; padding: 16px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.badge { background: var(--badge); color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; font-size: .9rem; }
+
+/* Timeline */
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--border); margin-left: 10px; }
+.timeline-item { position: relative; margin: 0 0 20px 20px; }
+.timeline-marker { position: absolute; left: -12px; top: 6px; width: 10px; height: 10px; background: var(--primary); border-radius: 999px; }
+.timeline-content h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.muted { color: var(--muted); }
+
+/* Cards */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { border: 1px solid var(--border); background: var(--bg-elev); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.card-actions { display: flex; gap: 8px; margin-top: 4px; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 22px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
